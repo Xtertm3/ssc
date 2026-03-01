@@ -1,0 +1,181 @@
+.about-page {
+  padding-top: 75px;
+  position: relative;
+}
+
+.about-us {
+  background: linear-gradient(135deg, #fff5f0 0%, #ffffff 50%, #f0f8ff 100%);
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text {
+  background: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(255, 140, 66, 0.12);
+  margin-bottom: 40px;
+  line-height: 1.8;
+  animation: fadeInUp 0.8s ease-out;
+  border-left: 6px solid var(--primary-orange);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.about-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 140, 66, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.about-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 70px rgba(255, 140, 66, 0.15);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-us .section-title {
+  color: var(--dark-gray);
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(135deg, var(--primary-orange), var(--dark-gray));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-us .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-gold));
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 1.05rem;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+  line-height: 1.8;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-text strong {
+  color: var(--primary-orange);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.policy-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-policy {
+  background: linear-gradient(135deg, var(--primary-orange), var(--primary-gold));
+  color: white;
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 5px 20px rgba(255, 140, 66, 0.3);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-policy::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-policy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 140, 66, 0.4);
+}
+
+.btn-policy:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 30px 0;
+  }
+
+  .about-text {
+    padding: 30px;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-us .section-title {
+    font-size: 2rem;
+  }
+
+  .policy-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-policy {
+    width: 100%;
+  }
+}

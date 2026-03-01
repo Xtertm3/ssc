@@ -1,0 +1,217 @@
+.payments-page {
+  padding-top: 75px;
+}
+
+.payments {
+  background: linear-gradient(135deg, #fff 0%, #fef5ec 100%);
+  min-height: 100vh;
+  padding: 80px 0;
+}
+
+.payments .section-title {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, var(--primary-orange), var(--dark-gray));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.payments .section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-gold));
+  margin: 20px auto;
+  border-radius: 3px;
+}
+
+.payments .section-subtitle {
+  margin-bottom: 40px;
+  color: var(--dark-gray);
+  font-size: 1.1rem;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.payment-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: fadeInScale 0.6s ease-out backwards;
+}
+
+.payment-card:nth-child(1) { animation-delay: 0.1s; }
+.payment-card:nth-child(2) { animation-delay: 0.3s; }
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.payment-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+.payment-icon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.payment-card h3 {
+  text-align: center;
+  color: var(--primary-orange);
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.payment-details {
+  background: linear-gradient(135deg, #fef5ec, #fff);
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 140, 66, 0.2);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--dark-gray);
+}
+
+.detail-value {
+  color: #666;
+  text-align: right;
+}
+
+.detail-value.important {
+  font-weight: 700;
+  color: var(--primary-orange);
+  font-size: 1.1rem;
+  font-family: 'Courier New', monospace;
+}
+
+.cheque-info {
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(212, 175, 55, 0.1));
+  border-radius: 10px;
+  color: var(--dark-gray);
+  line-height: 1.8;
+}
+
+.cheque-info strong {
+  color: var(--primary-orange);
+  font-weight: 700;
+}
+
+.cheque-instructions h4 {
+  color: var(--primary-gold);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.cheque-instructions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cheque-instructions li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+  color: var(--dark-gray);
+  line-height: 1.6;
+}
+
+.cheque-instructions li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-orange);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.payment-notice {
+  display: flex;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(212, 175, 55, 0.1));
+  padding: 30px;
+  border-radius: 15px;
+  border-left: 5px solid var(--primary-orange);
+  align-items: flex-start;
+}
+
+.notice-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.notice-content h4 {
+  color: var(--primary-orange);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.notice-content p {
+  color: var(--dark-gray);
+  line-height: 1.8;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .payment-methods {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .payment-card {
+    padding: 30px 20px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .detail-value {
+    text-align: left;
+  }
+
+  .payment-notice {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
