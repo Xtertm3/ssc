@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <img src="/logo/logo.png" alt="Sri Shakambari Chits Logo" className="logo-image" />
+          <img src="/logo/logo.jpg" alt="Sri Shakambari Chits Logo" className="logo-image" />
         </Link>
 
         <button 
