@@ -87,20 +87,22 @@
 
 .footer-contact p {
   color: rgba(255, 255, 255, 0.8);
-  line-height: 1.8;
-  margin-bottom: 15px;
+  line-height: 1.6;
+  margin-bottom: 18px;
   font-size: 0.95rem;
+  display: block;
 }
 
 .contact-icon {
-  margin-right: 8px;
-  font-size: 1.1rem;
+  display: none;
 }
 
 .footer-contact a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   transition: color 0.3s ease;
+  display: block;
+  margin-bottom: 8px;
 }
 
 .footer-contact a:hover {

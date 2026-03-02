@@ -4,59 +4,67 @@ const ChitSchemes = ({ scrollToSection }) => {
   const schemes = [
     {
       id: 1,
-      term: 'Mid Term',
-      months: '30 Months',
-      amount: '6,00,000',
-      monthly: '20,000/ Month'
+      term: 'Long-Term',
+      months: '40 Months',
+      amount: '50,00,000',
+      monthly: '1,25,000/month',
+      popular: true
     },
     {
       id: 2,
-      term: 'Mid Term',
-      months: '30 Months',
-      amount: '3,00,000',
-      monthly: '10,000/ Month'
+      term: 'Short-Term',
+      months: '25 Months',
+      amount: '20,00,000',
+      monthly: '80,000/month',
+      popular: true
     },
     {
       id: 3,
-      term: 'Mid Term',
-      months: '30 Months',
-      amount: '1,50,000',
-      monthly: '5,000/ Month'
+      term: 'Long-Term',
+      months: '40 Months',
+      amount: '20,00,000',
+      monthly: '50,000/month',
+      popular: false
     },
     {
       id: 4,
-      term: 'Long Term',
-      months: '40 Months',
-      amount: '20,00,000',
-      monthly: '50,000/ Month'
+      term: 'Short-Term',
+      months: '25 Months',
+      amount: '10,00,000',
+      monthly: '40,000/month',
+      popular: true
     },
     {
       id: 5,
-      term: 'Long Term',
-      months: '40 Months',
-      amount: '10,00,000',
-      monthly: '25,000/ Month'
+      term: 'Short-Term',
+      months: '25 Months',
+      amount: '5,00,000',
+      monthly: '20,000/month',
+      popular: false
     },
     {
       id: 6,
-      term: 'Long Term',
-      months: '40 Months',
-      amount: '5,00,000',
-      monthly: '12,500/ Month'
+      term: 'Mid-Term',
+      months: '30 Months',
+      amount: '3,00,000',
+      monthly: '10,000/month',
+      popular: false
     },
     {
       id: 7,
-      term: 'Long Term',
-      months: '40 Months',
+      term: 'Short-Term',
+      months: '25 Months',
       amount: '2,00,000',
-      monthly: '5,000/ Month'
+      monthly: '8,000/month',
+      popular: false
     },
     {
       id: 8,
-      term: 'Long Term',
+      term: 'Long-Term',
       months: '40 Months',
-      amount: '1,00,000',
-      monthly: '2,500/ Month'
+      amount: '2,00,000',
+      monthly: '5,000/month',
+      popular: false
     }
   ]
 
@@ -70,8 +78,11 @@ const ChitSchemes = ({ scrollToSection }) => {
 
         <div className="schemes-grid">
           {schemes.map((scheme) => (
-            <div key={scheme.id} className={`scheme-card ${scheme.term.toLowerCase().replace(' ', '-')}`}>
-              <div className="scheme-badge">{scheme.term}</div>
+            <div key={scheme.id} className={`scheme-card ${scheme.term.toLowerCase().replace('-', '-')} ${scheme.popular ? 'popular' : ''}`}>
+              <div className="scheme-badge">
+                {scheme.term}
+                {scheme.popular && <span className="popular-badge">Popular</span>}
+              </div>
               <div className="scheme-duration">{scheme.months}</div>
               <div className="scheme-amount">₹{scheme.amount}</div>
               <div className="scheme-monthly">{scheme.monthly}</div>

@@ -68,8 +68,8 @@ const ContactUs = () => {
               <p>
                 <a href="tel:08022215473">080 22215473</a><br />
                 <a href="tel:08022217639">080 22217639</a><br />
-                <a href="tel:+919986277180">+91 9986277180</a><br />
-                <a href="tel:+919448168227">+91 9448168227</a>
+                <a href="tel:+919448168227">+91 9448168227</a><br />
+                <a href="tel:+919986277180">+91 9986277180</a>
               </p>
             </div>
 
@@ -77,7 +77,7 @@ const ContactUs = () => {
               <div className="contact-icon">✉️</div>
               <h3>Email Us</h3>
               <p>
-                <a href="mailto:info@mrjchits.co.in">info@mrjchits.co.in</a>
+                <a href="mailto:info@srishakambarichits.com">info@srishakambarichits.com</a>
               </p>
             </div>
           </div>

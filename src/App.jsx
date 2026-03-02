@@ -10,6 +10,7 @@ import OurTeam from './pages/OurTeam'
 import Testimonials from './pages/Testimonials'
 import RecentPosts from './pages/RecentPosts'
 import ContactUs from './pages/ContactUs'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/posts" element={<RecentPosts />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

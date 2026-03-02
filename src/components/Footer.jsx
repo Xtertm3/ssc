@@ -53,11 +53,11 @@ const Footer = () => {
                 <p>
                   <span className="contact-icon">📞</span>
                   <a href="tel:08022215473">080 22215473</a><br />
-                  <a href="tel:+919986277180">+91 9986277180</a>
+                  <a href="tel:+919448168227">+91 9448168227</a>
                 </p>
                 <p>
                   <span className="contact-icon">✉️</span>
-                  <a href="mailto:info@mrjchits.co.in">info@mrjchits.co.in</a>
+                  <a href="mailto:info@srishakambarichits.com">info@srishakambarichits.com</a>
                 </p>
               </div>
             </div>
