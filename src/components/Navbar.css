@@ -25,32 +25,19 @@
 
 .navbar-logo {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   color: var(--dark-gray);
+  height: 55px;
+  min-width: 55px;
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.logo-main {
-  font-size: 1.3rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: var(--dark-gray);
-  line-height: 1.1;
-}
-
-.logo-sub {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--primary-orange);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+.logo-image {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  max-width: 100px;
 }
 
 .navbar-menu {
